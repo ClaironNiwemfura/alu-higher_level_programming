@@ -1,0 +1,19 @@
+#!/usr/bin/python3
+import py_compile
+import sys
+
+def compile_python_file(file_name):
+    try:
+        py_compile.compile(file_name)
+        print(f"Compiling {file_name} ...")
+    except py_compile.PyCompileError as e:
+        print(f"Error compiling {file_name}: {e}", file=sys.stderr)
+        sys.exit(1)
+
+if __name__ == "__main__":
+    if len(sys.argv) != 2:
+        print("Usage: python 101-compile.py <file_name>")
+        sys.exit(1)
+    
+    file_name = sys.argv[1]
+    compile_python_file(file_name)
