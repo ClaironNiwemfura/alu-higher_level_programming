@@ -1,4 +1,4 @@
-o#!/usr/bin/python3
+#!/usr/bin/python3
 """define a function that tells the number of characters written"""
 
 
