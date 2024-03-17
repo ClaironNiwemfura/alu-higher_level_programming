@@ -22,3 +22,8 @@ class Student:
                 if item in dic.keys():
                     new_dic[item] = dic[item]
             return(new_dic)
+
+    """Method that replaces all attributes of an instance."""
+    def reload_from_json(self, json):
+        for item in json.keys():
+            self.__dict__[item] = json[item]
